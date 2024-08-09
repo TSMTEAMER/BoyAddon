@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "addon",
+  "id": "boyaddon",
   "version": "${version}",
-  "name": "Example Addon",
-  "description": "An example addon for the Boze Addon API",
+  "name": "Tronware",
+  "description": "ga",
   "authors": [],
   "contact": {
     "repo": "https://github.com/boze-dev/example-addon"

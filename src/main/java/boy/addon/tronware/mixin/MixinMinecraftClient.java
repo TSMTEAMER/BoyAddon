@@ -1,6 +1,6 @@
-package com.example.addon.mixin;
+package boy.addon.tronware.mixin;
 
-import com.example.addon.ExampleAddon;
+import boy.addon.tronware.TronWare;
 import dev.boze.api.BozeInstance;
 import dev.boze.api.exception.AddonInitializationException;
 import net.minecraft.client.MinecraftClient;
@@ -16,9 +16,9 @@ public class MixinMinecraftClient {
     @Inject(method = "<init>", at = @At("TAIL"))
     public void onInit(RunArgs args, CallbackInfo ci) {
         try {
-            BozeInstance.INSTANCE.registerAddon(ExampleAddon.INSTANCE);
+            BozeInstance.INSTANCE.registerAddon(TronWare.INSTANCE);
         } catch (AddonInitializationException e) {
-            ExampleAddon.LOG.fatal("Failed to initialize " + ExampleAddon.INSTANCE.id, e);
+            TronWare.LOG.fatal("Failed to initialize " + TronWare.INSTANCE.id, e);
         }
     }
 }

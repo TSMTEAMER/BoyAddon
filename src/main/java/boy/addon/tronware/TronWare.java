@@ -1,30 +1,33 @@
-package com.example.addon;
+package boy.addon.tronware;
 
+import boy.addon.tronware.commands.MeteorFriends;
 import com.google.gson.JsonObject;
 import dev.boze.api.addon.Addon;
 import dev.boze.api.addon.module.ToggleableModule;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class ExampleAddon extends Addon {
+public class TronWare extends Addon {
 
     public static final String ID = "boyaddon";
     public static final String NAME = "BoyAddon";
     public static final String DESCRIPTION = "TronWare";
     public static final String VERSION = "Non-Fuctinol";
 
-    public static final ExampleAddon INSTANCE = new ExampleAddon();
+    public static final TronWare INSTANCE = new TronWare();
 
     public static final Logger LOG = LogManager.getLogger();
 
-    public ExampleAddon() {
+    public TronWare() {
         super(ID, NAME, DESCRIPTION, VERSION);
     }
 
     @Override
     public boolean initialize() {
         LOG.info("Initializing " + name);
+        MeteorFriends meteorfriends = new MeteorFriends();
 
+        modules.add(meteorfriends);
         LOG.info("Successfully initialized " + name);
 
         return super.initialize();
