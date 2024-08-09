@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "addon",
+  "version": "${version}",
+  "name": "Example Addon",
+  "description": "An example addon for the Boze Addon API",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/boze-dev/example-addon"
+  },
+  "license": "GPL-3.0",
+  "environment": "*",
+  "mixins": [
+    "addon.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15",
+    "minecraft": "1.20.6"
+  }
+}
