@@ -8,10 +8,10 @@ import org.apache.logging.log4j.Logger;
 
 public class ExampleAddon extends Addon {
 
-    public static final String ID = "example_addon";
-    public static final String NAME = "Example Addon";
-    public static final String DESCRIPTION = "An example addon for Boze";
-    public static final String VERSION = "1.0.0";
+    public static final String ID = "boyaddon";
+    public static final String NAME = "BoyAddon";
+    public static final String DESCRIPTION = "TronWare";
+    public static final String VERSION = "Non-Fuctinol";
 
     public static final ExampleAddon INSTANCE = new ExampleAddon();
 
